@@ -262,7 +262,7 @@ sealed class Plugin : BaseUnityPlugin
                          */
                         
                         // If the player can be revived (^) start countdown to revival
-                        death -= 1f / (ticksToRevive * (1f / Options.ReviveSpeed.Value));
+                        death -= 1f / (ticksToRevive * (1f / (Options.ReviveSpeed.Value * 1.75f)));
                         //UnityEngine.Debug.Log($"Thing is being revived with value: {death}");
                         
                         // If countdown completes, revive player
